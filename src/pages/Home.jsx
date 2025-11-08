@@ -1,20 +1,20 @@
-import { useEffect } from "react";
 import HeroBackground from "../assets/images/hero.webp";
 import Model from "../assets/images/model.webp";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { Clients } from "../static/data/clients";
 import AboutCompany1 from "../assets/images/about-company-1.jpg";
 import AboutCompany2 from "../assets/images/about-company-2.jpg";
 import AboutCompany3 from "../assets/images/about-company-3.jpg";
+import { Testimonials } from "../static/data/testimonials";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Faqs } from "../static/data/faq";
 
 const Home = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
-
   return (
     <>
+      {/* hero section */}
       <section id="hero" className="hero section">
         <div className="hero-bg">
           <img src={HeroBackground} alt="" />
@@ -52,6 +52,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* end of hero section */}
 
       {/* featured services section */}
       <section
@@ -287,7 +288,7 @@ const Home = () => {
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div className="service-item item-indigo position-relative">
                 <div className="d-flex align-items-center justify-content-start">
-                  <i class="bi bi-calendar4-week icon"></i>
+                  <i className="bi bi-calendar4-week icon"></i>
                   <div>
                     <h3>Shorterm-Rental Bookkeeping</h3>
                   </div>
@@ -311,6 +312,118 @@ const Home = () => {
         </div>
       </section>
 
+      {/* faq section */}
+      <section id="faq" className="faq section">
+        <div className="container section-title" data-aos="fade-up">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+              <div className="faq-container">
+                {Faqs.map((faq, index) => (
+                  <div className="faq-item faq-active" key={index}>
+                    <h3>{faq.question}</h3>
+                    <div className="faq-content">
+                      <p>{faq.answer}</p>
+                    </div>
+                    <i className="faq-toggle bi bi-chevron-right"></i>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* end of faq section */}
+
+      {/* testimonials section */}
+      <section
+        id="testimonials"
+        className="section testimonials light-background"
+      >
+        <div className="container section-title" data-aos="fade-up">
+          <h2>Testimonials</h2>
+          <p>
+            Don’t just take our word for it — hear from our satisfied clients!
+          </p>
+        </div>
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
+          {/* <div class="swiper init-swiper">
+            <div class="swiper-wrapper">
+              {Testimonials.map((testimonial, index) => (
+                <div class="swiper-slide" key={index}>
+                  <div class="testimonial-item">
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>{testimonial.message}</p>
+                    <div class="profile mt-auto">
+                      <img
+                        src={testimonial.image}
+                        class="testimonial-img"
+                        alt=""
+                      />
+                      <h3>{testimonial.name}</h3>
+                      <h4>{testimonial.title}</h4>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div> */}
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            loop={true}
+            speed={600}
+            autoplay={{ delay: 5000 }}
+            slidesPerView={"auto"}
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: 1,
+              },
+            }}
+            className="swiper init-swiper"
+          >
+            <div className="swiper-config">
+              <div className="swiper-wrapper">
+                {Testimonials.map((testimonial, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="testimonial-item">
+                      <div className="stars">
+                        <i className="bi bi-star-fill"></i>
+                        <i className="bi bi-star-fill"></i>
+                        <i className="bi bi-star-fill"></i>
+                        <i className="bi bi-star-fill"></i>
+                        <i className="bi bi-star-fill"></i>
+                      </div>
+                      <p>{testimonial.message}</p>
+                      <div className="profile mt-auto">
+                        <img src={testimonial.image} alt={testimonial.name} />
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </div>
+            </div>
+          </Swiper>
+        </div>
+      </section>
+      {/* end of testimonials section */}
+
+      {/* contact section */}
       <section id="contact" className="contact section">
         <div className="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
@@ -433,9 +546,7 @@ const Home = () => {
                       Your message has been sent. Thank you!
                     </div>
 
-                    <button type="submit" onClick="showToast()">
-                      Send Message
-                    </button>
+                    <button type="submit">Send Message</button>
                   </div>
                 </div>
               </form>
@@ -443,6 +554,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* end of contact section */}
     </>
   );
 };
