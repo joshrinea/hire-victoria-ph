@@ -1,5 +1,5 @@
 import { Menus } from "../utils/contants/constants";
-import Logo from "../assets/images/logo.jpeg";
+import Logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   return (
