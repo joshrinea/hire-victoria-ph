@@ -1,9 +1,22 @@
 import { Menus } from "../utils/contants/constants";
 import Logo from "../assets/images/logo.png";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, true);
+
   return (
-    <header id="header" className="header d-flex align-items center fixed-top">
+    <header id="header" className={`header d-flex align-items center fixed-top ${isScrolled ? "nav-scrolled" : ""}`}>
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
         <a href="/" className="logo d-flex align-items-center me-auto">
           {/* <h1 className="sitename">Logo.</h1> */}
@@ -16,23 +29,6 @@ const Navbar = () => {
                 <a href={menu.route}>{menu.link}</a>
               </li>
             ))}
-            {/* <li>
-              <a href="" className="active">
-                home
-              </a>
-            </li>
-            <li>
-              <a href="">about</a>
-            </li>
-            <li>
-              <a href="">features</a>
-            </li>
-            <li>
-              <a href="">services</a>
-            </li>
-            <li>
-              <a href="">contact</a>
-            </li> */}
           </ul>
         </nav>
       </div>

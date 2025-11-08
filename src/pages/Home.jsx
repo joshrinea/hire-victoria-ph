@@ -67,17 +67,40 @@ const Home = () => {
             >
               <div className="service-item d-flex">
                 <div className="icon flex-shrink-0">
+                  <i className="bi bi-bar-chart"></i>
+                </div>
+                <div>
+                  <h4 className="title">
+                    <a href="#" className="stretched-link">
+                      Fractional Services
+                    </a>
+                  </h4>
+                  <p className="description">
+                    Perfect for growing businesses needing part-time financial
+                    leadership.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-xl-4 col-lg-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div className="service-item d-flex">
+                <div className="icon flex-shrink-0">
                   <i className="bi bi-briefcase"></i>
                 </div>
                 <div>
                   <h4 className="title">
                     <a href="#" className="stretched-link">
-                      Fractional
+                      Shorterm-Rental Bookkeeping
                     </a>
                   </h4>
                   <p className="description">
-                    CFO Services Financial Controllership Services Bookkeeping
-                    Taxation
+                    Perfect for growing businesses needing part-time financial
+                    leadership.
                   </p>
                 </div>
               </div>
@@ -95,31 +118,11 @@ const Home = () => {
                 <div>
                   <h4 className="title">
                     <a href="#" className="stretched-link">
-                      HireYourOwn
-                    </a>
-                  </h4>
-                  <p className="description">Accountant Bookkeeper</p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-xl-4 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div className="service-item d-flex">
-                <div className="icon flex-shrink-0">
-                  <i className="bi bi-bar-chart"></i>
-                </div>
-                <div>
-                  <h4 className="title">
-                    <a href="#" className="stretched-link">
-                      Shorterm-Rental Bookkeeping
+                      Hire Your Own
                     </a>
                   </h4>
                   <p className="description">
-                    Property Management Rent Arbitrage Owned Properties
+                    Build your own dedicated virtual accounting team.
                   </p>
                 </div>
               </div>
@@ -214,9 +217,10 @@ const Home = () => {
       </section>
       {/* end of clients section */}
 
+      {/* services section */}
       <section id="services" className="services section light-background">
         <div className="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
+          <h2>Our Services</h2>
           <p>
             Hire Victoria offers following professional services to meet your
             needs.
@@ -226,101 +230,80 @@ const Home = () => {
           <div className="row g-5">
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div className="service-item item-cyan position-relative">
-                {/* <i className="bi bi-activity icon"></i> */}
-                <div>
-                  <h3>Fractional</h3>
+                <div className="d-flex align-items-center justify-content-start">
+                  <i className="bi bi-percent icon"></i>
+                  <div>
+                    <h3>Fractional</h3>
+                  </div>
+                </div>
+                <div className="mt-4">
                   <ul>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>CFO</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Services</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Financial</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Controllership</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Services</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Bookkeeping</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Taxation</span>
                     </li>
                   </ul>
-                  {/* <p>
-                    Provident nihil minus qui consequatur non omnis maiores. Eos
-                    accusantium minus dolores iure perferendis tempore et
-                    consequatur.
-                  </p> */}
-                  {/* <a href="#" className="read-more stretched-link">
-                    Learn More <i className="bi bi-arrow-right"></i>
-                  </a> */}
                 </div>
               </div>
             </div>
+
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="service-item item-cyan position-relative">
-                <div>
-                  <h3>HireYourOwn</h3>
+              <div className="service-item item-teal position-relative">
+                <div className="d-flex align-items-center justify-content-start">
+                  <i className="bi bi-card-list icon"></i>
+                  <div>
+                    <h3>Hire Your Own</h3>
+                  </div>
+                </div>
+                <div className="mt-4">
                   <ul>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Accountant</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Bookkeeper</span>
                     </li>
                   </ul>
-                  {/* <p>
-                    Provident nihil minus qui consequatur non omnis maiores. Eos
-                    accusantium minus dolores iure perferendis tempore et
-                    consequatur.
-                  </p> */}
-                  {/* <a href="#" className="read-more stretched-link">
-                    Learn More <i className="bi bi-arrow-right"></i>
-                  </a> */}
                 </div>
               </div>
             </div>
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div className="service-item item-cyan position-relative">
-                <div>
-                  <h3>Shorterm-Rental Bookkeeping</h3>
+              <div className="service-item item-indigo position-relative">
+                <div className="d-flex align-items-center justify-content-start">
+                  <i class="bi bi-calendar4-week icon"></i>
+                  <div>
+                    <h3>Shorterm-Rental Bookkeeping</h3>
+                  </div>
+                </div>
+                <div className="mt-4">
                   <ul>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Property Management</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Rent Arbitrage</span>
                     </li>
                     <li>
-                      {/* <i class="bi bi-check-circle"></i> */}
                       <span>Owned Properties</span>
                     </li>
                   </ul>
-                  {/* <p>
-                    Provident nihil minus qui consequatur non omnis maiores. Eos
-                    accusantium minus dolores iure perferendis tempore et
-                    consequatur.
-                  </p> */}
-                  {/* <a href="#" className="read-more stretched-link">
-                    Learn More <i className="bi bi-arrow-right"></i>
-                  </a> */}
                 </div>
               </div>
             </div>
@@ -328,13 +311,12 @@ const Home = () => {
         </div>
       </section>
 
-
       <section id="contact" className="contact section">
         <div className="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
           <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
+            Get in touch with our team and take the first step toward
+            stress-free finances
           </p>
         </div>
 
@@ -381,14 +363,14 @@ const Home = () => {
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="300">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
-                frameborder="0"
-                allowfullscreen=""
+                frameBorder="0"
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
                 style={{
-                    border: 0,
-                    width: "100%",
-                    height: "410px"
+                  border: 0,
+                  width: "100%",
+                  height: "410px",
                 }}
               ></iframe>
             </div>
@@ -451,7 +433,7 @@ const Home = () => {
                       Your message has been sent. Thank you!
                     </div>
 
-                    <button type="submit" onclick="showToast()">
+                    <button type="submit" onClick="showToast()">
                       Send Message
                     </button>
                   </div>
