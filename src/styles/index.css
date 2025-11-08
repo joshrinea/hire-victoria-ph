@@ -134,10 +134,12 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background-color: white;
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  /* box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1); */
 }
 
 .header .logo {
@@ -145,8 +147,11 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  /* max-height: 36px;
+  margin-right: 8px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
 }
 
 .header .logo h1 {
@@ -230,6 +235,7 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    text-transform: capitalize;
   }
 
   .navmenu li {

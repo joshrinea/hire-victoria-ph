@@ -385,6 +385,11 @@ const Home = () => {
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
+                style={{
+                    border: 0,
+                    width: "100%",
+                    height: "410px"
+                }}
               ></iframe>
             </div>
 
