@@ -1,41 +1,62 @@
 export const Faqs = [
   {
-    question: "What type of rentals do you support?",
+    question: "What industries do you work with?",
     answer:
-      "We handle short-term, mid-term, and long-term rentals — including Airbnb, multifamily, and single-family portfolios.",
+      "We serve clients across a wide range of industries, including e-commerce, SaaS, digital currency, short-term rentals, property management, retail, and construction. Our team adapts to your specific business model and reporting needs.",
   },
   {
-    question: "Do I need to own property?",
+    question: "What are fractional financial services?",
     answer:
-      "No — we support owners, co-hosts, arbitrage operators, and property managers handling rentals on behalf of others.",
+      "Fractional financial services allow you to access expert CFOs and Controllers on a part-time or flexible basis, without hiring full-time executives. This gives you strategic financial leadership, better cash flow control, and stronger business performance — at a fraction of the cost.",
   },
   {
-    question: "What platforms do you work with?",
+    question: "What’s included in your CFO Services?",
     answer:
-      "We work with tools you already use — including QuickBooks Online, Airbnb, Vrbo, Stripe, Guesty, Hostaway, Clearing, and more.",
+      "Our Fractional CFOs provide strategic financial planning, budgeting, forecasting, performance analysis, and fundraising support. They help you understand your numbers, improve profitability, and make smarter business decisions for long-term growth.",
   },
   {
-    question: "Can you help if my books are a mess?",
+    question: "What do your Financial Controllership Services cover?",
     answer:
-      "Yes. Whether you’re 3 months or 3 years behind, we can clean up your books and bring everything current.",
+      "Our Controllers focus on day-to-day financial operations such as cash flow management, bill payments, forecasting, and reporting accuracy. They ensure your financial foundation is strong and your records are always ready for decision-making.",
   },
   {
-    question: "Do you offer trust accounting and owner statements?",
+    question: "What bookkeeping services do you offer?",
     answer:
-      "Absolutely. We specialize in trust accounting and generate monthly owner statements for co-hosts and property managers.",
+      "We handle everything from transaction recording and reconciliation to financial reporting and cleanup. Whether you’re catching up on past books or maintaining ongoing accuracy, we ensure your finances are Fast, Accurate, and Understandable.",
   },
   {
-    question: "Do I need to sign a contract?",
-    answer: "Nope — all of our plans are flexible and month-to-month.",
+    question: "How does the “Hire Your Own Accountant” service work?",
+    answer:
+      "You can hire a dedicated accountant or bookkeeper who works exclusively for your business between 4 to 8 hours per day. This gives you consistent, personalized financial support without the cost and hassle of full-time employment.",
   },
   {
-    question: "What does pricing start at?",
+    question: "What makes your short-term rental bookkeeping different?",
     answer:
-      "Plans start at $59/month for Airbnb bookkeeping. Larger portfolios and custom setups are priced based on volume and services.",
+      "We understand the unique needs of Airbnb hosts, rental property owners, and property management businesses. Our accountants specialize in tracking property income, cleaning and maintenance expenses, occupancy rates, and ROI — so you always know how your rentals are performing.",
+  },
+  {
+    question: "Do you work with clients outside the country?",
+    answer:
+      "Yes. We serve clients globally. Our team is experienced in handling multi-currency transactions, international compliance, and cross-border financial reporting.",
+  },
+  {
+    question: "Which accounting software do you use?",
+    answer:
+      "We work with industry-leading platforms such as QuickBooks Online, Xero, and other cloud-based accounting tools, depending on your preference and business requirements.",
+  },
+  {
+    question: "How secure is my financial data?",
+    answer:
+      "Your security is our top priority. We use encrypted, cloud-based systems with multi-factor authentication and strict access controls to protect your confidential information.",
   },
   {
     question: "How do I get started?",
     answer:
-      "Click “Schedule Your Free Demo” and we’ll walk you through the next steps, answer your questions, and review your setup.",
+      "Simply book a free consultation with our team. We’ll review your business needs, recommend the best service package, and get your books organized and optimized — fast.",
+  },
+  {
+    question: "What makes your company different?",
+    answer:
+      "We combine expertise, technology, and transparency. Our approach to accounting is Fast, Accurate, and Understandable, giving you clear financial insights and confidence to grow your business.",
   },
 ];

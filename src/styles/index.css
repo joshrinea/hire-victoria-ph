@@ -2129,3 +2129,22 @@ section,
 .footer-email:hover {
   text-decoration: underline;
 }
+
+.border-error {
+  border: 1px solid red !important;
+}
+
+.toast-animate {
+  opacity: 0;
+  transform: translateX(120%);
+}
+
+.toast-animate.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast-animate.slide-out {
+  opacity: 0;
+  transform: translateX(120%);
+}

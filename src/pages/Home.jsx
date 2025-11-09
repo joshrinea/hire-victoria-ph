@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import { Faqs } from "../static/data/faq";
 import { useState } from "react";
 import useMailHook from "../hooks/useMailHook";
+import Form from "../components/Form";
 
 const Home = () => {
   const [activeFaqIndex, setActiveFaqIndex] = useState(0);
@@ -526,7 +527,8 @@ const Home = () => {
             </div>
 
             <div className="col-lg-6">
-              <form
+              <Form />
+              {/* <form
                 action="#"
                 method="post"
                 className="php-email-form"
@@ -586,7 +588,7 @@ const Home = () => {
                     <button type="submit">Send Message</button>
                   </div>
                 </div>
-              </form>
+              </form> */}
             </div>
           </div>
         </div>
