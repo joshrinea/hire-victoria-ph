@@ -243,7 +243,7 @@ const Home = () => {
       {/* end of clients section */}
 
       {/* services section */}
-      <section id="services" className="services section light-background">
+       <section id="services" className="services section light-background">
         <div className="container section-title" data-aos="fade-up">
           <h2>Our Services</h2>
           <p>
@@ -264,25 +264,13 @@ const Home = () => {
                 <div className="mt-4">
                   <ul>
                     <li>
-                      <span>CFO</span>
+                      <span><b>CFO</b> - Gain access to world-class financial leadership. Our experienced CFOs with global expertise will help guide your strategy, optimize your finances, and drive sustainable growth. Let’s scale your business together.</span>
                     </li>
                     <li>
-                      <span>Services</span>
+                      <span><b>Financial Controllership Services</b> - Take control of your cash flow. We’ll help you with financial forecasting, bill payments, and overall financial management so you can focus on growing your business with confidence.</span>
                     </li>
                     <li>
-                      <span>Financial</span>
-                    </li>
-                    <li>
-                      <span>Controllership</span>
-                    </li>
-                    <li>
-                      <span>Services</span>
-                    </li>
-                    <li>
-                      <span>Bookkeeping</span>
-                    </li>
-                    <li>
-                      <span>Taxation</span>
+                      <span><b>Bookkeeping Services</b> - Keep your books accurate, organized, and up to date. Whether you need a full cleanup or ongoing maintenance, our team ensures your records are precise and compliant.</span>
                     </li>
                   </ul>
                 </div>
@@ -294,16 +282,13 @@ const Home = () => {
                 <div className="d-flex align-items-center justify-content-start">
                   <i className="bi bi-card-list icon"></i>
                   <div>
-                    <h3>Hire Your Own</h3>
+                    <h3>Hire Your Own Accountant</h3>
                   </div>
                 </div>
                 <div className="mt-4">
                   <ul>
                     <li>
-                      <span>Accountant</span>
-                    </li>
-                    <li>
-                      <span>Bookkeeper</span>
+                      <span>Need a dedicated professional to handle your finances daily? We can provide you with an experienced accountant or bookkeeper who will work 4–8 hours a day exclusively for your business. Get the flexibility and expertise you need — without the overhead.</span>
                     </li>
                   </ul>
                 </div>
@@ -314,19 +299,13 @@ const Home = () => {
                 <div className="d-flex align-items-center justify-content-start">
                   <i className="bi bi-calendar4-week icon"></i>
                   <div>
-                    <h3>Shorterm-Rental Bookkeeping</h3>
+                    <h3>Shor-Term Rental Bookkeeping</h3>
                   </div>
                 </div>
                 <div className="mt-4">
                   <ul>
                     <li>
-                      <span>Property Management</span>
-                    </li>
-                    <li>
-                      <span>Rent Arbitrage</span>
-                    </li>
-                    <li>
-                      <span>Owned Properties</span>
+                      <span>Own a property? Manage rentals? Do rent arbitrage? We specialize in bookkeeping for short-term rentals and property management businesses. Our skilled accountants ensure your books are accurate and up to date — so you always know how your properties are performing.</span>
                     </li>
                   </ul>
                 </div>
