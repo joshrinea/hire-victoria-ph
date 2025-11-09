@@ -2121,3 +2121,11 @@ section,
     opacity: 0;
   }
 }
+
+.footer-email {
+  cursor: pointer;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}

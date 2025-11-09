@@ -10,8 +10,20 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Faqs } from "../static/data/faq";
+import { useState } from "react";
+import useMailHook from "../hooks/useMailHook";
 
 const Home = () => {
+  const [activeFaqIndex, setActiveFaqIndex] = useState(0);
+
+  const handleClick = (id) => {
+    if (id === activeFaqIndex) {
+      setActiveFaqIndex(-1);
+    } else {
+      setActiveFaqIndex(id);
+    }
+  };
+
   return (
     <>
       {/* hero section */}
@@ -34,13 +46,13 @@ const Home = () => {
               <a href="#about" className="btn-get-started">
                 Hire Victoria
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="glightbox btn-watch-video d-flex align-items-center"
               >
                 <i className="bi bi-play-circle"></i>
                 <span>Watch Video</span>
-              </a>
+              </a> */}
             </div>
             <img
               src={Model}
@@ -73,12 +85,12 @@ const Home = () => {
                 <div>
                   <h4 className="title">
                     <a href="#" className="stretched-link">
-                      Fractional Services
+                      CFO Services
                     </a>
                   </h4>
                   <p className="description">
-                    Perfect for growing businesses needing part-time financial
-                    leadership.
+                    Access expert CFOs who guide strategy, optimize finances,
+                    and drive sustainable growth.
                   </p>
                 </div>
               </div>
@@ -100,8 +112,8 @@ const Home = () => {
                     </a>
                   </h4>
                   <p className="description">
-                    Perfect for growing businesses needing part-time financial
-                    leadership.
+                    We deliver accurate bookkeeping for short-term rentals and
+                    property management businesses.
                   </p>
                 </div>
               </div>
@@ -119,11 +131,13 @@ const Home = () => {
                 <div>
                   <h4 className="title">
                     <a href="#" className="stretched-link">
-                      Hire Your Own
+                      Hire Your Own Accountant
                     </a>
                   </h4>
                   <p className="description">
-                    Build your own dedicated virtual accounting team.
+                    Get a dedicated accountant or bookkeeper for 4–8 hours
+                    daily, offering expertise and flexibility without the
+                    overhead.
                   </p>
                 </div>
               </div>
@@ -142,13 +156,18 @@ const Home = () => {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <p className="who-we-are">Who We Are</p>
-              <h3>Built for Hosts & Rental Pros</h3>
-              <p className="fst-italic">
-                Hire Victoria is the go-to accounting team for short-term and
-                mid-term rental businesses. From single-unit hosts to operators
-                managing 100+ listings, we handle the numbers so you can focus
-                on bookings and growth.
+              {/* <p className="who-we-are">Who We Are</p>
+              <h3>Built for Hosts & Rental Pros</h3> */}
+              <h3>Who We Are</h3>
+              <p className="fw-light">
+                We are a dynamic financial agency offering a wide range of
+                services, including bookkeeping, accounting, global recruitment,
+                and fractional finance solutions. Our clients span across
+                diverse industries such as e-commerce, digital currency, SaaS,
+                short-term rentals, property management, retail, construction,
+                and more. At our core, we believe effective accounting should be
+                Fast, Accurate, and Understandable — empowering our clients to
+                make confident financial decisions with clarity and efficiency.
               </p>
               <ul>
                 <li>
@@ -165,11 +184,16 @@ const Home = () => {
                 </li>
                 <li>
                   <i className="bi bi-check-circle"></i>
-                  <span>Starting at $59/month</span>
+                  <span>Starting at $50 per property</span>
                 </li>
               </ul>
-              <a href="#" className="read-more">
-                <span>Book a Consultant</span>
+              <a
+                href="https://calendly.com/elle-cpa-msac"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="read-more"
+              >
+                <span>Book a meeting</span>
                 <i className="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -234,7 +258,7 @@ const Home = () => {
                 <div className="d-flex align-items-center justify-content-start">
                   <i className="bi bi-percent icon"></i>
                   <div>
-                    <h3>Fractional</h3>
+                    <h3>Fractional Services</h3>
                   </div>
                 </div>
                 <div className="mt-4">
@@ -322,7 +346,13 @@ const Home = () => {
             <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="faq-container">
                 {Faqs.map((faq, index) => (
-                  <div className="faq-item faq-active" key={index}>
+                  <div
+                    className={`faq-item ${
+                      activeFaqIndex === index ? "faq-active" : ""
+                    } `}
+                    key={index}
+                    onClick={() => handleClick(index)}
+                  >
                     <h3>{faq.question}</h3>
                     <div className="faq-content">
                       <p>{faq.answer}</p>
@@ -443,7 +473,10 @@ const Home = () => {
               >
                 <i className="bi bi-geo-alt"></i>
                 <h3>Address</h3>
-                <p>New York, NY</p>
+                <p>
+                  La Elle Business Holdings Incorporate Office, San Martin,
+                  Bacnotan, La Union, 2515
+                </p>
               </div>
             </div>
 
@@ -455,7 +488,7 @@ const Home = () => {
               >
                 <i className="bi bi-telephone"></i>
                 <h3>Call Us</h3>
-                <p>+1 2345 67899 55</p>
+                <p>+6393-22449-897</p>
               </div>
             </div>
 
@@ -464,10 +497,14 @@ const Home = () => {
                 className="info-item d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-up"
                 data-aos-delay="400"
+                style={{
+                  cursor: "pointer",
+                }}
+                onClick={() => useMailHook()}
               >
                 <i className="bi bi-envelope"></i>
                 <h3>Email Us</h3>
-                <p>support@hirevictoriaph.com</p>
+                <p>support@hirevictoria-ph.com</p>
               </div>
             </div>
           </div>
@@ -475,7 +512,7 @@ const Home = () => {
           <div className="row gy-4 mt-1">
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="300">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.8106750472207!2d121.07478087596805!3d14.552816685927903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8816d1f784d%3A0x9ebbb248bcd261c!2sThe%20Rochester%20San%20Joaquin%20Pasig%20Condominium%20By%3A%20Empire%20East!5e0!3m2!1sen!2sph!4v1762677509280!5m2!1sen!2sph"
                 frameBorder="0"
                 allowFullScreen=""
                 loading="lazy"
