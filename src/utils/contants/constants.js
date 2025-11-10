@@ -1,22 +1,22 @@
 export const Menus = [
   {
     link: "home",
-    route: "/",
+    route: "hero",
   },
   {
     link: "about",
-    route: "/about",
+    route: "about",
   },
-//   {
-//     link: "features",
-//     route: "/features",
-//   },
+  //   {
+  //     link: "features",
+  //     route: "/features",
+  //   },
   {
     link: "services",
-    route: "/services",
+    route: "services",
   },
   {
     link: "contact",
-    route: "/contact",
+    route: "contact",
   },
 ];
