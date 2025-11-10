@@ -27,14 +27,12 @@ const Form = () => {
     //   subject: "New Contact Message from your Website",
     // },
     onSuccess: (msg, data) => {
-      console.log("success", data);
       setIsSuccess(true);
       setMessage(msg);
       showToast(`${data.message || "Email has been sent!"}`, "success");
       reset();
     },
     onError: (msg, data) => {
-      console.log("error", data);
       setIsSuccess(false);
       showToast("Something went wrong. Please try again.", "error");
       setMessage(msg);

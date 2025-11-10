@@ -1,6 +1,6 @@
 import { Menus } from "../utils/contants/constants";
 import Logo from "../assets/images/logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,6 +14,20 @@ const Navbar = () => {
   };
 
   window.addEventListener("scroll", handleScroll, true);
+
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.classList.add("mobile-nav-active");
+    } else {
+      document.body.classList.remove("mobile-nav-active");
+    }
+  }, [isNavOpen]);
+
+  const handleToggle = () => {
+    setIsNavOpen((isNavOpen) => !isNavOpen);
+  };
 
   return (
     <header
@@ -30,12 +44,17 @@ const Navbar = () => {
         <nav id="navmenu" className="navmenu">
           <ul>
             {Menus.map((menu, index) => (
-              <li key={index}>
+              <li key={index} onClick={handleToggle}>
                 <a href={`#${menu.route}`}>{menu.link}</a>
               </li>
             ))}
           </ul>
-          <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <i
+            className={`mobile-nav-toggle d-xl-none ${
+              isNavOpen ? "bi-x" : "bi bi-list"
+            }`}
+            onClick={handleToggle}
+          ></i>
         </nav>
       </div>
     </header>

@@ -10,12 +10,23 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Faqs } from "../static/data/faq";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useMailHook from "../hooks/useMailHook";
 import Form from "../components/Form";
 import { Services } from "../static/data/services";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+
+  useEffect(() => {
+    Aos.init({
+      once: true,
+      duration: 600,
+      offset: 150
+    });
+  }, []);
+  
   const [activeFaqIndex, setActiveFaqIndex] = useState(0);
 
   const handleClick = (id) => {
@@ -295,7 +306,7 @@ const Home = () => {
                   <div>
                     <h3>{service.service}</h3>
                     <p>{service.description}</p>
-                    <a href="#" className="read-more stretched-link">
+                    <a href="#contact" className="read-more stretched-link">
                       Learn More <i className="bi bi-arrow-right"></i>
                     </a>
                   </div>
