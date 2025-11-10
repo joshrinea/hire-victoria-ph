@@ -1,4 +1,5 @@
 import useMailHook from "../hooks/useMailHook";
+import logo from "../assets/images/logo.png";
 
 const Footer = () => {
   return (
@@ -7,6 +8,7 @@ const Footer = () => {
         <div className="row gy-4">
           <div className="col-lg-4 col-md-6 footer-about">
             <a href="/" className="logo d-flex align-items-center">
+              <img src={logo} alt="Hire Victoria" />
               <span className="sitename">Hire Victoria</span>
             </a>
             <div className="footer-contact pt-3">
@@ -15,27 +17,43 @@ const Footer = () => {
                 Bacnotan, La Union, 2515
               </p>
               <p className="mt-3">
-                <strong>Phone:</strong> <span>+6393-22449-897</span>
+                <strong>Phone:</strong> <span>+63916-406-7273</span>
               </p>
               <p>
                 <strong>Email:</strong>{" "}
                 <span onClick={useMailHook} className="footer-email">
-                  support@hirevictoria-ph.com
+                  support@hirevictoriaph.com
                 </span>
               </p>
             </div>
 
             <div className="social-links d-flex mt-4">
-              <a href="">
+              <a
+                href="https://www.facebook.com/hirevictoriaPH/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="bi bi-twitter-x"></i>
               </a>
-              <a href="">
+              <a
+                href="https://www.facebook.com/hirevictoriaPH"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="bi bi-facebook"></i>
               </a>
-              <a href="">
+              <a
+                href="https://www.facebook.com/hirevictoriaPH"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="bi bi-instagram"></i>
               </a>
-              <a href="">
+              <a
+                href="https://www.facebook.com/hirevictoriaPH"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="bi bi-linkedin"></i>
               </a>
             </div>

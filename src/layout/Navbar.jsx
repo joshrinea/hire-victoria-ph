@@ -16,7 +16,12 @@ const Navbar = () => {
   window.addEventListener("scroll", handleScroll, true);
 
   return (
-    <header id="header" className={`header d-flex align-items center fixed-top ${isScrolled ? "nav-scrolled" : ""}`}>
+    <header
+      id="header"
+      className={`header d-flex align-items center fixed-top ${
+        isScrolled ? "nav-scrolled" : ""
+      }`}
+    >
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
         <a href="/" className="logo d-flex align-items-center me-auto">
           {/* <h1 className="sitename">Logo.</h1> */}
@@ -26,10 +31,11 @@ const Navbar = () => {
           <ul>
             {Menus.map((menu, index) => (
               <li key={index}>
-                <a href={menu.route}>{menu.link}</a>
+                <a href={`#${menu.route}`}>{menu.link}</a>
               </li>
             ))}
           </ul>
+          <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
       </div>
     </header>

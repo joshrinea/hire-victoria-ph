@@ -13,6 +13,7 @@ import { Faqs } from "../static/data/faq";
 import { useState } from "react";
 import useMailHook from "../hooks/useMailHook";
 import Form from "../components/Form";
+import { Services } from "../static/data/services";
 
 const Home = () => {
   const [activeFaqIndex, setActiveFaqIndex] = useState(0);
@@ -74,7 +75,30 @@ const Home = () => {
       >
         <div className="container">
           <div className="row gy-4">
-            <div
+            {Services.slice(0, 3).map((serv, index) => (
+              <div
+                className="col-xl-4 col-lg-6"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                key={index}
+              >
+                <div className="service-item d-flex">
+                  <div className="icon flex-shrink-0">
+                    <i className={serv.icon}></i>
+                  </div>
+                  <div>
+                    <h4 className="title">
+                      <a href="#" className="stretched-link">
+                        {serv.service}
+                      </a>
+                    </h4>
+                    <p className="description">{serv.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* <div
               className="col-xl-4 col-lg-6"
               data-aos="fade-up"
               data-aos-delay="100"
@@ -142,7 +166,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -157,8 +181,6 @@ const Home = () => {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              {/* <p className="who-we-are">Who We Are</p>
-              <h3>Built for Hosts & Rental Pros</h3> */}
               <h3>Who We Are</h3>
               <p className="fw-light">
                 We are a dynamic financial agency offering a wide range of
@@ -227,6 +249,10 @@ const Home = () => {
 
       {/* clients section */}
       <section id="clients" className="clients section">
+        <div className="container section-title" data-aos="fade-up">
+          <h2>Our Clients</h2>
+          <p>Proud to Serve Firms That Value Accuracy and Efficiency.</p>
+        </div>
         <div className="container" data-aos="fade-up">
           <div className="row gy-4">
             {Clients.map((client, index) => (
@@ -252,9 +278,32 @@ const Home = () => {
             needs.
           </p>
         </div>
+
         <div className="container">
           <div className="row g-5">
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            {Services.map((service, index) => (
+              <div
+                className="col-lg-6"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                key={index}
+              >
+                <div
+                  className={`service-item position-relative ${service.accent}`}
+                >
+                  <i className={`${service.icon} icon`}></i>
+                  <div>
+                    <h3>{service.service}</h3>
+                    <p>{service.description}</p>
+                    <a href="#" className="read-more stretched-link">
+                      Learn More <i className="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div className="service-item item-cyan position-relative">
                 <div className="d-flex align-items-center justify-content-start">
                   <i className="bi bi-percent icon"></i>
@@ -310,6 +359,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div className="service-item item-indigo position-relative">
                 <div className="d-flex align-items-center justify-content-start">
@@ -332,7 +382,7 @@ const Home = () => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -380,33 +430,6 @@ const Home = () => {
           </p>
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
-          {/* <div class="swiper init-swiper">
-            <div class="swiper-wrapper">
-              {Testimonials.map((testimonial, index) => (
-                <div class="swiper-slide" key={index}>
-                  <div class="testimonial-item">
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>{testimonial.message}</p>
-                    <div class="profile mt-auto">
-                      <img
-                        src={testimonial.image}
-                        class="testimonial-img"
-                        alt=""
-                      />
-                      <h3>{testimonial.name}</h3>
-                      <h4>{testimonial.title}</h4>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
           <Swiper
             modules={[Pagination, Autoplay]}
             loop={true}
@@ -489,7 +512,7 @@ const Home = () => {
               >
                 <i className="bi bi-telephone"></i>
                 <h3>Call Us</h3>
-                <p>+6393-22449-897</p>
+                <p>+63916-406-7273</p>
               </div>
             </div>
 
@@ -528,67 +551,6 @@ const Home = () => {
 
             <div className="col-lg-6">
               <Form />
-              {/* <form
-                action="#"
-                method="post"
-                className="php-email-form"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <div className="row gy-4">
-                  <div className="col-md-6">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      className="form-control"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-
-                  <div className="col-md-6">
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="email"
-                      placeholder="Your Email"
-                      required
-                    />
-                  </div>
-
-                  <div className="col-md-12">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="subject"
-                      id="message"
-                      placeholder="Subject"
-                      required
-                    />
-                  </div>
-
-                  <div className="col-md-12">
-                    <textarea
-                      className="form-control"
-                      name="message"
-                      rows="6"
-                      placeholder="Message"
-                      required=""
-                    ></textarea>
-                  </div>
-
-                  <div className="col-md-12 text-center">
-                    <div className="loading">Loading</div>
-                    <div className="error-message"></div>
-                    <div className="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-
-                    <button type="submit">Send Message</button>
-                  </div>
-                </div>
-              </form> */}
             </div>
           </div>
         </div>
