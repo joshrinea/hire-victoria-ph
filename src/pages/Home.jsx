@@ -583,7 +583,7 @@ const Home = () => {
           <div className="row gy-4 mt-1">
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="300">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.8106750472207!2d121.07478087596805!3d14.552816685927903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8816d1f784d%3A0x9ebbb248bcd261c!2sThe%20Rochester%20San%20Joaquin%20Pasig%20Condominium%20By%3A%20Empire%20East!5e0!3m2!1sen!2sph!4v1762677509280!5m2!1sen!2sph"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15284.399063166235!2d120.32762658715819!3d16.7218732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3391ed5686f2d2c1%3A0xe9b2985bef2ee8d2!2sLuelco%20Bacnotan%20Office!5e0!3m2!1sen!2sph!4v1762841837448!5m2!1sen!2sph"
                 frameBorder="0"
                 allowFullScreen=""
                 loading="lazy"
