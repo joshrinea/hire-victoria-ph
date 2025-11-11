@@ -1,5 +1,6 @@
 import useMailHook from "../hooks/useMailHook";
 import logo from "../assets/images/logo.png";
+import { Address, ContactNumber, Email } from "../utils/contants/constants";
 
 const Footer = () => {
   return (
@@ -13,16 +14,15 @@ const Footer = () => {
             </a>
             <div className="footer-contact pt-3">
               <p>
-                La Elle Business Holdings Incorporate Office, San Martin,
-                Bacnotan, La Union, 2515
+                {Address}
               </p>
               <p className="mt-3">
-                <strong>Phone:</strong> <span>+63916-406-7273</span>
+                <strong>Phone:</strong> <span>{ContactNumber}</span>
               </p>
               <p>
                 <strong>Email:</strong>{" "}
                 <span onClick={useMailHook} className="footer-email">
-                  support@hirevictoriaph.com
+                  {Email}
                 </span>
               </p>
             </div>

@@ -1282,6 +1282,37 @@ section,
   /* flex-direction: column; */
 }
 
+.services .service-title {
+  text-align: start;
+  position: relative;
+}
+
+.services .service-title h3 {
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+}
+
+/* .services .service-title h3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+} */
+
+.services .service-title p {
+  color: #3e5055;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+}
+
 .services .service-item .icon {
   font-size: 32px;
   border-radius: 10px;
@@ -1305,7 +1336,8 @@ section,
 
 .services .service-item p {
   margin-bottom: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 40%); */
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
   transition: 0.3s;
 }
 
@@ -1363,9 +1395,9 @@ section,
   background: rgba(243, 38, 140, 0.1);
 }
 
-.services .service-item:hover {
+/* .services .service-item:hover {
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .services .service-item:hover h3 {
   color: var(--heading-color);

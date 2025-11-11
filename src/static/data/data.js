@@ -1,1 +1,0 @@
-export const Email = "support@hirevictoria-ph.com";

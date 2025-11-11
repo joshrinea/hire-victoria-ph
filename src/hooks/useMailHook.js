@@ -1,4 +1,4 @@
-import { Email } from "../static/data/data";
+import { Email } from "../utils/contants/constants";
 
 export default function useMailHook() {
   const email = Email;
