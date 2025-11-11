@@ -20,3 +20,7 @@ export const Menus = [
     route: "contact",
   },
 ];
+
+export const Address = "1st Floor LEB Corporate Office";
+export const ContactNumber = "+63916-406-7273";
+export const Email = "support@hirevictoria-ph.com";

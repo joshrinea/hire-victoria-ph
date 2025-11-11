@@ -16,17 +16,17 @@ import Form from "../components/Form";
 import { Services } from "../static/data/services";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Address, ContactNumber, Email } from "../utils/contants/constants";
 
 const Home = () => {
-
   useEffect(() => {
     Aos.init({
       once: true,
       duration: 600,
-      offset: 150
+      offset: 150,
     });
   }, []);
-  
+
   const [activeFaqIndex, setActiveFaqIndex] = useState(0);
 
   const handleClick = (id) => {
@@ -192,8 +192,9 @@ const Home = () => {
               data-aos="fade-up"
               data-aos-delay="100"
             >
+              {/* <p class="who-we-are">Who We Are</p> */}
               <h3>Who We Are</h3>
-              <p className="fw-light">
+              <p className="fw-light mb-4">
                 We are a dynamic financial agency offering a wide range of
                 services, including bookkeeping, accounting, global recruitment,
                 and fractional finance solutions. Our clients span across
@@ -203,7 +204,7 @@ const Home = () => {
                 Fast, Accurate, and Understandable — empowering our clients to
                 make confident financial decisions with clarity and efficiency.
               </p>
-              <ul>
+              {/* <ul>
                 <li>
                   <i className="bi bi-check-circle"></i>
                   <span>Gain Financial Clarity</span>
@@ -220,7 +221,7 @@ const Home = () => {
                   <i className="bi bi-check-circle"></i>
                   <span>Starting at $50 per property</span>
                 </li>
-              </ul>
+              </ul> */}
               <a
                 href="https://calendly.com/elle-cpa-msac"
                 target="_blank"
@@ -293,23 +294,57 @@ const Home = () => {
         <div className="container">
           <div className="row g-5">
             {Services.map((service, index) => (
-              <div
-                className="col-lg-6"
-                data-aos="fade-up"
-                data-aos-delay="100"
-                key={index}
-              >
-                <div
-                  className={`service-item position-relative ${service.accent}`}
-                >
-                  <i className={`${service.icon} icon`}></i>
-                  <div>
-                    <h3>{service.service}</h3>
-                    <p>{service.description}</p>
-                    <a href="#contact" className="read-more stretched-link">
-                      Learn More <i className="bi bi-arrow-right"></i>
-                    </a>
-                  </div>
+
+              // <div
+              //   className="col-lg-6"
+              //   data-aos="fade-up"
+              //   data-aos-delay="100"
+              //   key={index}
+              // >
+              //   <div
+              //     className={`service-item position-relative ${service.accent}`}
+              //   >
+              //     <i className={`${service.icon} icon`}></i>
+              //     <div>
+              //       <h3>{service.service}</h3>
+              //       <p>{service.description}</p>
+              //       <a href="#contact" className="read-more stretched-link">
+              //         Learn More <i className="bi bi-arrow-right"></i>
+              //       </a>
+              //     </div>
+              //   </div>
+              // </div>
+
+              <div>
+                <div key={index} className="service-title">
+                  <h3>{service.service}</h3>
+                  <p>{service.description}</p>
+                </div>
+                <div className="row g-2">
+                  {service?.categories?.map((category, index) => (
+                    <div
+                      className="col-lg-4"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                      key={index}
+                    >
+                      <div
+                        className={`service-item position-relative ${category.accent}`}
+                      >
+                        <i className={`${category.icon} icon`}></i>
+                        <div>
+                          <h3>{category.service}</h3>
+                          <p>{category.description}</p>
+                          {/* <a
+                            href="#contact"
+                            className="read-more stretched-link"
+                          >
+                            Learn More <i className="bi bi-arrow-right"></i>
+                          </a> */}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -509,8 +544,9 @@ const Home = () => {
                 <i className="bi bi-geo-alt"></i>
                 <h3>Address</h3>
                 <p>
-                  La Elle Business Holdings Incorporate Office, San Martin,
-                  Bacnotan, La Union, 2515
+                  {/* La Elle Business Holdings Incorporate Office, San Martin,
+                  Bacnotan, La Union, 2515 */}
+                  {Address}
                 </p>
               </div>
             </div>
@@ -523,7 +559,7 @@ const Home = () => {
               >
                 <i className="bi bi-telephone"></i>
                 <h3>Call Us</h3>
-                <p>+63916-406-7273</p>
+                <p>{ContactNumber}</p>
               </div>
             </div>
 
@@ -539,7 +575,7 @@ const Home = () => {
               >
                 <i className="bi bi-envelope"></i>
                 <h3>Email Us</h3>
-                <p>support@hirevictoria-ph.com</p>
+                <p>{Email}</p>
               </div>
             </div>
           </div>
